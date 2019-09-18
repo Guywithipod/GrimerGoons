@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Guywithipod/GrimerGoons/issues"
   },
-  "homepage": "https://github.com/Guywithipod/GrimerGoons#readme"
+  "homepage": "https://github.com/Guywithipod/GrimerGoons#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
