@@ -1,10 +1,11 @@
 {
-  "name": "GrimerGoons",
+  "name": "grimergoons",
   "version": "1.0.0",
-  "description": "",
+  "description": "sets up a reservation at the hottest diner in the world",
   "main": "GrimerGoons.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js",
     "watch": "nodemon Server.js"
   },
   "repository": {
@@ -12,14 +13,16 @@
     "url": "git+https://github.com/Guywithipod/GrimerGoons.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "grimergoons",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Guywithipod/GrimerGoons/issues"
   },
   "homepage": "https://github.com/Guywithipod/GrimerGoons#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "heroku": "^7.30.0",
+    "devDependencies": {},
     "nodemon": "^1.19.2"
   }
 }
