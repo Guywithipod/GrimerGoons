@@ -16,7 +16,7 @@ module.exports = function (app, express) {
         res.sendFile(path.join(__dirname, "GrimeyForm.html"));
     });
 
-    app.get("/reservationsview", function (req, res) {
+    app.get("/reservationview", function (req, res) {
         res.sendFile(path.join(__dirname, "GrimeyViews.html"));
     });
 
