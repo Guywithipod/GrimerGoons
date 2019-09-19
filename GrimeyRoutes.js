@@ -21,15 +21,15 @@ module.exports = function (app, express) {
     });
 
     app.get("/table", function (req, res) {
-        return res.json(JSON.stringify(tables));
+        return res.json(tables);
     });
 
     app.post("/table", function (req, res) {
         let data = req.body;
         if (tables.length >= 5) {
-            return res.json(JSON.stringify({
+            return res.json({
                 message: "All Booked Up"
-            }))
+            })
         }
         data.ID = tables.length + 1;
         tables.push(data);
