@@ -39,11 +39,13 @@
 
 
     <script type="text/javascript">
+    console.log(`Hank Hill`);
         axios.get('/table').then(function (response) {
-            if (response.length !== 0) {
-                response.forEach(table =>{
+            console.log(response);
+            if (response.data.length !== 0) {
+                response.data.forEach(table =>{
                     let tableHolder = document.createElement("div");
-                    tableHolder.innerHtml = ` <h1><strong>Table ${response.ID} <br>${response.name}</strong></h1> <br>Phone:${response.phone} <br>Email:${response.email}`;   
+                    tableHolder.innerHtml = `<h1><strong>Table ${table.ID} <br>${table.name}</strong></h1> <br>Phone:${table.phone} <br>Email:${table.email}`;   
                     document.getElementById("table-container").prepend(tableHolder);
 
                 });

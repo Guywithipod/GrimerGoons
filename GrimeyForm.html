@@ -65,16 +65,16 @@
                 email: document.getElementById("email").value.trim(),
                 phone: document.getElementById("phone").value.trim()
             };
-
+            axios.post('/table', newRes)
+                .then(function (response) {
+                    console.log(response);
+                    alert("Reserving you table...")
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
         })
-        axios.post('/table', newRes)
-            .then(function (response) {
-                console.log(response);
-                alert("Reserving you table...")
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+
     </script>
 
 </body>
