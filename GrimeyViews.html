@@ -1,11 +1,56 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     <title>Grimer Views</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Grimer's New Digs</h1>
+            <h3>Slimiest place of scum and villainy on earth. Also tacos.</h3>
+            <hr>
+            <a href="/"><button class="btn btn-danger btn-lg">
+                    Back to Habanero Hub
+                </button></a>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>The Gunkiest Tables</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="table-container">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        axios.get('/table').then(function (response) {
+            if (response.length !== 0) {
+                response.forEach(table =>{
+                    let tableHolder = document.createElement("div");
+                    tableHolder.innerHtml = ` <h1><strong>Table ${response.ID} <br>${response.name}</strong></h1> <br>Phone:${response.phone} <br>Email:${response.email}`;   
+                    document.getElementById("table-container").prepend(tableHolder);
+
+                });
+            }
+        });
+
+    </script>
 </body>
+
 </html>
