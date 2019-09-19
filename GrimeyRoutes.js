@@ -21,7 +21,7 @@ module.exports = function (app, express) {
     });
 
     app.get("/table", function (req, res) {
-        return res.json(JSON.stringify());
+        return res.json(JSON.stringify(tables));
     });
 
     app.post("/table", function (req, res) {
