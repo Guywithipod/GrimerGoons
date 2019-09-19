@@ -67,14 +67,16 @@
             };
             axios.post('/table', newRes)
                 .then(function (response) {
-                    console.log(response);
-                    alert("Reserving you table...")
+                    if (response.data[0].message === "Booked") {
+                        alert("Your table awaits!!")
+                    } else {
+                        alert("GO AWAY, NO ROOM FOR SCUM LIKE YOU!!!!!!!!!!!!!!!")
+                    }
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
         })
-
     </script>
 
 </body>
