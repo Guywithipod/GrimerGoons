@@ -5,7 +5,8 @@
   "main": "GrimerGoons.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node Server.js",
+    "watch": "nodemon Server.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,8 @@
   "homepage": "https://github.com/Guywithipod/GrimerGoons#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "heroku": "^7.30.0"
-  },
-  "devDependencies": {}
+    "heroku": "^7.30.0",
+    "devDependencies": {},
+    "nodemon": "^1.19.2"
+  }
 }
